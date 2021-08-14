@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="css/style-starter.css">
+</head>
+<body>
+    <div class="registerContainer">
+            <div class="registerWrapper">
+        <div class="RegisterUser">
+            <form action="/registerUser" method="POST" >
+                <div class="Field">
+                    <label for="uname">Username</label>
+                    <input type="text" name="username" id="uname" placeholder="Enter Username">
+                </div>
+                <div class="Field">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter Email">
+                </div>
+                <div class="Field">
+                    <label for="phone">phone</label>
+                    <input type="number" name="phone" id="phone" placeholder="+92 317 0810000">
+                </div>
+                <div class="Field">
+                    <label for="Subject">Subject</label>
+                    <input type="text" name="subject" id="Subject" placeholder="Mern Development">
+                </div>
+                <div class="Field">
+                    <label for="Image">Image</label>
+                    <input type="file" name="image" id="Image">
+                </div>
+                <div class="Field">
+                    Gender
+                    <div class="alignment">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="male" value="Male">
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                    </div>
+                </div>
+                <div class="Field">
+                    <input type="submit" name="btn" id="btn" value="Register">
+                </div>
+            </form>
+        </div>
+            </div>
+        </div>
+</body>
+</html>

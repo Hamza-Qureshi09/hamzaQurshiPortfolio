@@ -1,0 +1,22 @@
+{
+  "name": "hamzaportfolio",
+  "version": "1.0.0",
+  "description": "hamza website",
+  "main": "index.js",
+  "scripts": {
+    "run": "nodemon ./src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hamza Qureshi",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.2",
+    "helmet": "^4.6.0",
+    "mongoose": "^5.13.7",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.3",
+    "nodemon": "^2.0.12"
+  }
+}
