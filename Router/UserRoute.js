@@ -34,7 +34,7 @@ router.post("/postmessage",async(req,res)=>{
 
 // registration 
 router.get("/RegisterUser",(req,res)=>{
-    res.render("register");
+    res.render("register"); 
 })
 
 var Storage=multer.diskStorage({
@@ -64,6 +64,7 @@ router.post("/registerUser",upload,async(req,res)=>{
     console.log(saveUser);
     res.render("index");
 }catch(err){console.log(err)
-res.send(err)}
+res.send(err);
+console.log(err)}
 }) 
 module.exports=router;
