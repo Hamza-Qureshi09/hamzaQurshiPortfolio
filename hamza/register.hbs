@@ -11,7 +11,7 @@
     <div class="registerContainer">
             <div class="registerWrapper">
         <div class="RegisterUser">
-            <form action="/registerUser" method="POST" >
+            <form action="/registerUser" method="POST" enctype="multipart/form-data">
                 <div class="Field">
                     <label for="uname">Username</label>
                     <input type="text" name="username" id="uname" placeholder="Enter Username">
@@ -30,7 +30,7 @@
                 </div>
                 <div class="Field">
                     <label for="Image">Image</label>
-                    <input type="file" name="image" id="Image">
+                    <input type="file" name="file" id="Image">
                 </div>
                 <div class="Field">
                     Gender

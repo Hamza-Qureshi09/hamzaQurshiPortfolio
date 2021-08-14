@@ -14,10 +14,10 @@ const UserRegisterationScheme=new mongoose.Schema({
         type:String,
         max:100,
     },
-    Gender:{
+    Image:{
         type:String,
     },
-    Image:{
+    Gender:{
         type:String,
     },
 })

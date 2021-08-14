@@ -31,23 +31,6 @@ router.post("/postmessage",async(req,res)=>{
         console.log("Cannot send Message")
     };
 })
-// router.post("/registerUser",async(req,res)=>{
-//     try{
-//         const RegisterUserData=await UserRegisteration({
-//                         Username:req.body.userOne,
-//                         Email:req.body.email,
-//                         Phone:req.body.phone,
-//                         Subject:req.body.subject,
-//                         Gender:req.body.gender ,
-//                 })
-//                 const saveUser=await RegisterUserData.save();
-//                 console.log(saveUser);
-//                 res.render("register");
-//     }catch(error){
-//         console.log("error occured during send message"+error);
-//         console.log("Cannot send Message")
-//     };
-// })
 
 // registration 
 router.get("/RegisterUser",(req,res)=>{
@@ -58,22 +41,23 @@ var Storage=multer.diskStorage({
     destination:"./public/uploads/",
     filename:(req,file,cb)=>{
         cb(null,file.fieldname+"_"+Date.now()+path.extname(file.originalname));
-    }
+    } 
 });
 
 var upload=multer({
     storage:Storage
-}).single('file');
+}).single('file');  
 
 
 
-router.post("/registerUser",async(req,res)=>{
+router.post("/registerUser",upload,async(req,res)=>{
     try{
         const RegisterUserData=await UserRegisteration({
             Username:req.body.username,
             Email:req.body.email,
             Phone:req.body.phone,
             Subject:req.body.subject,
+            Image:req.file.filename,
             Gender:req.body.gender ,
     })
     const saveUser=await RegisterUserData.save();
